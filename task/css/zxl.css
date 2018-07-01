@@ -21,7 +21,7 @@ u{ text-decoration: none;}
 .hive{ background: #ee9900; color: #fff;}
 
 /*¿«»À…±*/
-.index_bg{background: #eee;}
+.index_bg{background: #eee;height:100%;overflow:hidden;}
 .index_hd{height: 2.375rem;background: #29bde0;}
 .index_hd ul{padding: 0.625rem 0 0.625rem 0.625rem;}
 .index_hd ul li{margin-bottom: 5px; width: 1.125rem;height: 2px;background: #fff;}
