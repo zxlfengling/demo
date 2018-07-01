@@ -12,9 +12,49 @@ input{ cursor:pointer;outline: none;}
 table{ border-collapse: collapse; }
 u{ text-decoration: none;}
 
+/*æ≈π¨∏Ò*/
 .hd{margin: 12px 0 0 14px;}
 .hd li{ margin-bottom: 12px;}
 .hd li span{display: inline-block;margin-right: 12px; width: 122px;height: 122px;background: #ffa600;border-radius: 6px;}
 .btn{width: 422px;height: 50px;line-height: 50px; color: #ee9900; border-radius: 4px;border: 1px solid #ee9900;text-align: center;cursor: pointer;}
 .btn1{ margin-bottom: 12px;}
 .hive{ background: #ee9900; color: #fff;}
+
+/*¿«»À…±*/
+.index_bg{background: #eee;}
+.index_hd{height: 2.375rem;background: #29bde0;}
+.index_hd ul{padding: 0.625rem 0 0.625rem 0.625rem;}
+.index_hd ul li{margin-bottom: 5px; width: 1.125rem;height: 2px;background: #fff;}
+.index_bd{ margin: 0.75rem 1.125rem 1.875rem;}
+.index_bd .col01{position: relative; margin-bottom: 0.75rem;height: 3.625rem;font-size:1.125rem; line-height: 3.625rem; text-align:center; background: #fff;border: 1px solid #c9c9c9;}
+.index_bd .col01 img{position: absolute;top:1.25rem;right: 0.4375rem; width: 0.75rem;}
+.index_bd .col02{background: #fff;border: 1px solid #c9c9c9;}
+.index_bd .col02 .md_hd{height: 2.75rem;line-height: 2.75rem;font-size: 1.125rem; color: #fbb435;border-bottom: 1px solid #fdd793; text-align: center;}
+.index_bd .md_bd{position: relative;}
+.index_bd .col02 ul{margin: 1rem 1.56rem 0;}
+.index_bd .col02 .content{height: 4.25rem;line-height: 4.25rem;color: #fff; background: #69d1e9; text-align: center;}
+.index_bd .col02 p{height: 2.5rem;line-height: 2.5rem; text-align: center;color: #787878;}
+.index_bd .next img{position: absolute;top:7.9375rem;right: 0.3125rem; width: 0.875rem;}
+.index_bd .point{width: 2.9375rem; margin: -0.5rem auto 0;}
+.index_bd .point i{display: inline-block;margin-right: 0.3125rem; width: 0.5rem;height:0.5rem;background: #ccc;border-radius: 50%;}
+.index_bd .point i.hive{background: #69d1e9;}
+.index_bd .point i:nth-child(4){ margin-right: 0;}
+/*media-zxl*/
+@media only screen and (max-width:320px) {
+    html{font-size:14px;}
+}
+@media only screen and (min-width:412px) and (max-width:479px) {
+    html{ font-size: 18px;}
+}
+@media only screen and (min-width:480px) and (max-width:639px) {
+    html{ font-size:20px;}
+}
+@media only screen and (min-width:640px) and (max-width:735px) {
+    html{ font-size:22px;}
+}
+@media only screen and (min-width:736px) and (max-width:1023px) {
+    html{ font-size:24px;}
+}
+@media only screen and (min-width:1024px) {
+    html{ font-size:26px;}
+}
