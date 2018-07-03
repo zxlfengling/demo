@@ -67,6 +67,7 @@ $(function(){
     $(".set_game .col01 .md_bd").click(function(){
         var val=parseFloat($(".num input").val());
         var newArr=[];
+        var arr2=[];
         for(var i=0;i<val;i++){
             $(".set_game .col01 li").hide();
         }
