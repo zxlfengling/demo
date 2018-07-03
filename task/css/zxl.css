@@ -20,9 +20,9 @@ u{ text-decoration: none;}
 .btn1{ margin-bottom: 12px;}
 .hive{ background: #ee9900; color: #fff;}
 
-/*狼人杀*/
+/*狼人杀 首页*/
 .index_bg{background: #eee;height:100%;overflow:hidden;}
-.index_hd{height: 2.375rem;background: #29bde0;}
+.index_hd{position: relative; height: 2.375rem;line-height: 2.375rem; background: #29bde0;text-align: center;}
 .index_hd ul{padding: 0.625rem 0 0.625rem 0.625rem;}
 .index_hd ul li{margin-bottom: 5px; width: 1.125rem;height: 2px;background: #fff;}
 .index_bd{ margin: 0.75rem 1.125rem 1.875rem;}
@@ -39,6 +39,32 @@ u{ text-decoration: none;}
 .index_bd .point i{display: inline-block;margin-right: 0.3125rem; width: 0.5rem;height:0.5rem;background: #ccc;border-radius: 50%;}
 .index_bd .point i.hive{background: #69d1e9;}
 .index_bd .point i:nth-child(4){ margin-right: 0;}
+
+/*狼人杀 设置人数*/
+.index_hd h1{font-size: 1.0625rem;color: #fff;}
+.index_hd .left img{position: absolute;top:0.5rem;left: 0.625rem; width: 0.781rem;height: 1.25rem;}
+.index_hd .right img{position: absolute;top:0.4rem;right: 0.625rem; width: 1.47rem;height: 1.47rem;}
+.set_game{margin: 0.625rem;}
+.set_game .col01{height: 14.1875rem;background: #fff;}
+.set_game .col01 .left{float: left;position: relative; width: 3.75rem;height: 14.1875rem;line-height:1.25rem; border-right: 1px solid #d9d9d9; font-size: 1.125rem;text-align: center;}
+.set_game .col01 .left p{position: absolute;top:50%;left: 50%;transform:translate(-50%,-50%); width: 1.125rem;}
+.set_game .col01 .right{margin-left:3.75rem;}
+.set_game .col01 .md_hd{ padding:1.5rem 0 0 0.9375rem; height: 10.6875rem;overflow: auto;}
+.set_game .col01 li{float: left;}
+.set_game .col01 span{margin-right: 2.125rem;}
+.set_game .col01 span i{margin-right: 0.75rem; display: inline-block;vertical-align: 0.125rem; width: 0.3125rem;height: 0.3125rem;background: #29bde0;}
+.set_game .col01 span i.orange{background: #ee9f1b;}
+.set_game .col01 .md_bd{height: 1.875rem;line-height: 1.875rem;border-top: 1px solid #d9d9d9;text-align: center;color: #29bde0;font-size: 0.875rem;}
+.set_game .col02{margin: 0.3125rem 0;height: 6.25rem;background: #fff;}
+.set_game .col02 .md_bd{margin-left: 0.9375rem;height: 2.43rem;line-height: 2.43rem; border-bottom: 1px solid #f0f0f0;font-size: .875rem; color: #d7d7d7;}
+.set_game .col03{height: 5.9375rem;background: #fff;overflow: hidden;}
+.set_game .col03 .num{margin: 0.625rem 0 1.5rem 0.9375rem;}
+.set_game .col03 .num input{width: 1.875rem;height: 1.75rem;text-align: center;font-size: 1rem;}
+.set_game .col03 .set_peo{margin-left: 1.875rem;}
+.set_game .col03 .box{float: left;margin-top: -0.5rem; width: 1.125rem;height:1.125rem;text-align: center;line-height:1.125rem;color: #fab344;border: 1px solid #d9d9d9;}
+.set_game .col03 .middle{float: left;position: relative; margin: 0 0.5rem; width: 12.75rem;height: 0.125rem;background: #ffe6be;}
+.set_game .col03 .middle img{position: absolute;top:-0.4rem; width: 1.875rem;height: 0.8125rem;}
+.set_game .col04{margin-top:0.5rem; height: 2.75rem;line-height: 2.75rem;color: #fff; background: #fab344;text-align: center;}
 /*media-zxl*/
 @media only screen and (max-width:320px) {
     html{font-size:14px;}

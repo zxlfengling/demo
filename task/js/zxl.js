@@ -20,7 +20,7 @@ window.onload=function(){
                     arr[i]=oSpan[Math.ceil(Math.random()*8)];
                 }
                 for(var i = 0;i<arr.length;i++){
-                    if(arr1.indexOf(arr[i]) == -1){  //ÅÐ¶ÏÔÚsÊý×éÖÐÊÇ·ñ´æÔÚ£¬²»´æÔÚÔòpushµ½sÊý×éÖÐ
+                    if(arr1.indexOf(arr[i]) == -1){  //ï¿½Ð¶ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pushï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                         arr1.push(arr[i]);
                     }
                 }
