@@ -107,7 +107,7 @@ function fn(){
         //forEach是js中的方法（针对数组），
         //而each是jquery中的方法（针对jquery对象，即$( ) ）。
         $(".set_game .col04").click(function(){
-            location.href="http://localhost:63342/ptt/task/flop01.html";
+            location.href="https://zxlfengling.github.io/demo/task/flop01.html";
             var session=[];
             $(".set_game .col01 li span").each(function(){
                 session.push($(this).text())
@@ -137,7 +137,7 @@ $(function(){
             $(".flop01_but").text("查看" + (num + 1) + "号身份");
             boo = false;
             if(num+1>arrSession.length){
-                location.href="http://localhost:63342/ptt/task/flop02.html"
+                location.href="https://zxlfengling.github.io/demo/task/flop02.html"
             }
         }
         else{
