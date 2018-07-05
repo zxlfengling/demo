@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
+<body style="height: 2000px;">
     <div style="width: 300px;height: 400px;background: red; display: table-cell; vertical-align: middle;">
 
     </div>
 </body>
 </html>
+<script src="js/jquery1.8.3.min.js"></script>
 <script>
-    var reg=/^([4-9]|(1[0-6]))$/;
-    var str='4a'
-   alert(reg.test(str))
+
+    $(window).scroll(function(){
+        location.href="http://localhost:63342/ptt/task/22.html"
+        if($(document).scrollTop()!=0){
+            sessionStorage.setItem("offsetTop", $(window).scrollTop());//保存滚动位置
+        }
+    });
 
 
-
-
+//    var reg=/^([4-9]|(1[0-6]))$/;
+//    var str='4a'
+//   alert(reg.test(str))
 //    var str='abcdef';
 //    var re=/bcd/;
 //    alert(str.search(re))
