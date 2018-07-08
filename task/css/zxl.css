@@ -72,16 +72,24 @@ u{ text-decoration: none;}
 .flop01_img span{position: absolute;left: 50%;top:5%;transform:translate(-50%,-50%);}
 .flop01_img em{position: absolute;top:80%;left: 50%;transform:translate(-50%,-50%);}
 .flop01_img img{width: 100%;}
-.flop01_but,.flop02_but{margin: 0 2.75rem;height: 2.75rem;line-height: 2.75rem;text-align: center;font-size: 1rem; color: #fff;background: #fbb435;}
+.flop01_but,.flop02_but,.flop01_over,.flop01_note{margin: 0 2.75rem;height: 2.75rem;line-height: 2.75rem;text-align: center;font-size: 1rem; color: #fff;background: #fbb435;}
 .flop01_img img.img01,.flop01_img img.img02{position: absolute;top:6.8rem;left: 4rem; width: 9.375rem;}
 .flop01_img img.img02{display: none;}
 
 /*法官查看*/
-.flop02{
-    margin: 1rem;
-}
-.flop02 li{float: left;margin-bottom: 1rem; margin-right: .8rem; padding-top: 2rem; width: 6rem;height: 4rem;background: #f5c97b;border: 2px solid #fff;text-align: center;}
+.flop02{margin: 1rem;}
+.flop02 li{float: left;position: relative; margin-bottom: 2rem; margin-right: .8rem; padding-top: 2rem; width: 6rem;height: 4rem;background: #f5c97b;border: 2px solid #fff;text-align: center;}
 .flop02 li em{display: block;margin-top: .7rem; height: 2rem;line-height: 2rem; background: #83b09a;}
+.flop02 li i{position: absolute;left: 40%; width: 2rem;height: 2rem;background: url("../images/langrensha11.png") no-repeat;}
+/*法官日志*/
+.flop03{margin: 1.125rem 2.75rem;}
+.flop03 .col01{height: 2.625rem;line-height: 2.625rem;color: #29bde0;border: 1px solid #ccc; background: #f7f7f7;text-align:center;}
+.flop03 li{margin-top: 0.625rem; height: 2.375rem;line-height: 2.375rem;cursor: pointer; color: #fff; background: #24a7c6;text-align: center;}
+.flop03 .flop01_over,.flop03 .flop01_note{float: left; margin-top: 1.5rem;width: 40%;margin: 1.5rem 5%;cursor: pointer; }
+/*游戏结束*/
+.index_hd .left01 img{height: 1.25rem;}
+.over .col01 img{display: block; margin: 2rem auto; width: 54.8%;}
+.over p{margin: 0 2rem;color: #ffc865;}
 /*media-zxl*/
 @media only screen and (max-width:320px) {
     html{font-size:14px;}
