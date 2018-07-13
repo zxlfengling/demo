@@ -111,7 +111,7 @@ $(function(){
                     session.push($(this).text())
                 })
                 sessionStorage.setItem("click", session);
-                location.href="http://localhost:63342/ptt/task/flop01.html";
+                location.href="https://zxlfengling.github.io/demo/task/flop01.html";
             })
         })
 

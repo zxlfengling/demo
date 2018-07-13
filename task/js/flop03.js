@@ -18,7 +18,7 @@ $(function(){
     $(".flop03 li").eq(0).click(function(){
         var num= parseInt(sessionStorage.getItem("change"));
         if(num==0){
-            location.href="http://localhost:63342/ptt/task/kill.html";
+            location.href="https://zxlfengling.github.io/demo/task/kill.html";
             sessionStorage.setItem("change", 1);
             $(".flop03 li").eq(0).css("background","none");
         }else if(num==1){
@@ -66,7 +66,7 @@ $(function(){
         }else if(num==2){
             alert("不能点")
         }else if(num==3){
-            location.href="http://localhost:63342/ptt/task/kill.html";
+            location.href="https://zxlfengling.github.io/demo/task/kill.html";
             sessionStorage.setItem("change", 4);
         }
     })

@@ -12,7 +12,7 @@ $(function(){
         sessionStorage.setItem("change",0);
         //记录初始的天
         sessionStorage.setItem("day",1);
-        location.href="http://localhost:63342/ptt/task/flop03.html";
+        location.href="https://zxlfengling.github.io/demo/task/flop03.html";
     })
 
 })

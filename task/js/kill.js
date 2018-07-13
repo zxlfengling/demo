@@ -87,14 +87,14 @@ $(function(){
         if(Killer.length>=civy.length){
             alert("杀手赢了");
             sessionStorage.setItem("victory","杀手赢了");
-            location.href="http://localhost:63342/ptt/task/over.html";
+            location.href="https://zxlfengling.github.io/demo/task/over.html";
             return
         }else if(Killer.length==0){
             alert("农民获胜");
             sessionStorage.setItem("victory","平民赢了");
-            location.href="http://localhost:63342/ptt/task/over.html";
+            location.href="https://zxlfengling.github.io/demo/task/over.html";
             return
         }
-        location.href="http://localhost:63342/ptt/task/flop03.html";
+        location.href="https://zxlfengling.github.io/demo/task/flop03.html";
     })
 })

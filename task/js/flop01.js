@@ -9,7 +9,7 @@ $(function(){
         $(".flop01_but").click(function(){
             if(boo) {
                 if(num+1>arrSession.length){
-                    location.href="http://localhost:63342/ptt/task/flop02.html";
+                    location.href="https://zxlfengling.github.io/demo/task/flop02.html";
                     return
                 }
                 $(".flop01_img span").text(num + 1);
