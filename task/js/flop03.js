@@ -20,6 +20,7 @@ $(function(){
         if(num==0){
             location.href="https://zxlfengling.github.io/demo/task/kill.html";
             sessionStorage.setItem("change", 1);
+            sessionStorage.setItem("selected",1);
             $(".flop03 li").eq(0).css("background","none");
         }else if(num==1){
             alert("不能点")
@@ -68,6 +69,7 @@ $(function(){
         }else if(num==3){
             location.href="https://zxlfengling.github.io/demo/task/kill.html";
             sessionStorage.setItem("change", 4);
+            sessionStorage.setItem("selected",0);
         }
     })
 

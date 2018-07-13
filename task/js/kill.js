@@ -30,7 +30,7 @@ $(function(){
 //第二步，当点击身份时，1杀人/2投票,死亡的人等于选中的人
     $(".kill_li li").click(function(){
         if(sessionStorage.getItem("change")=="1"){
-            sessionStorage.setItem("selected",1);
+            //sessionStorage.setItem("selected",1);
             var people=$(".kill_li span").eq($(this).index()).text();
             if(people=="杀手"){
                 alert("本是同根生，相煎何太急")
