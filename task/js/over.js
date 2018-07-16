@@ -32,9 +32,9 @@ $(function(){
     var wanshang=[];
     for(var i=0;i<over.length;i++){
         if(i%2==0){
-            wanshang.push("<s>晚上："+death[i]+"号被杀手杀死，"+(death[i])+"号是"+over[i]+"</s>");
+            wanshang.push("<s>晚上："+(death[i]+1)+"号被杀手杀死，"+((death[i])+1)+"号是"+over[i]+"</s>");
         }else{
-            baitian.push("<s>白天："+death[i]+"号被杀手杀死，"+(death[i])+"号是"+over[i]+"</s>");
+            baitian.push("<s>白天："+(death[i]+1)+"号被杀手杀死，"+((death[i])+1)+"号是"+over[i]+"</s>");
         }
     }
     for(var i=0;i<j-1;i++){
