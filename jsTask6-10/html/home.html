@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand ">萝卜多后台管理系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <div class="nav-user-info nav">
+                <ul class="nav navbar-right">
+                    <li>
+                        <span class="vertical">|</span>
+                        <a>admin</a>
+                        <span class="vertical">|</span>
+                        <a ui-sref="login">
+                            <span>注销</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div ng-controller="homeCtrl" class="sidebar">
+    <div class="panel-collapse collapse in" id="collapseTwo">
+        <div class="panel-group" id="accordion">
+            <div class="panel-heading panel">
+                <a data-toggle="collapse" data-parent="#accordion" data-target="#item-container2" class="dsb padd-v" ng-class="{'click-color':checked}" ng-click="clicked()">
+                    Welcome
+                </a>
+                <div id="item-container2" class="panel-collapse collapse">
+                    <div>
+                        <ul>
+                            <li><a class="padd-v dsb" ui-sref="home.welcoom" ng-class="{'click-color':!checked}" ng-click="clicked()">欢迎界面</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading panel">
+                <a data-toggle="collapse" class="dsb padd-v" data-parent="#accordion" data-target="#item-container" ng-class="{'click-color':checked2}" ng-click="clicked2()">
+                    信息管理
+                </a>
+                <div id="item-container" class="panel-collapse collapse">
+                    <div>
+                        <ul>
+                            <li><a a class="padd-v dsb" ui-sref="home.listpages({pageid:1})" ng-class="{'click-color':!checked2}" ng-click="clicked2()">Article</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="ui-container" ui-view></div>

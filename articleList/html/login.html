@@ -1,0 +1,30 @@
+<div class="login_bg" ng-controller="login">
+       <div class="login_box">
+            <h1>喝我水站后台登录</h1>
+            <div id="prompt_wrap">
+                <div class="prompt" id="prompt01"><i>-</i>请输入账户名</div>
+                <div class="prompt" id="prompt02"><i>-</i>请输入密码</div>
+                <div class="prompt" id="prompt03"><i>-</i>请填写账户名和密码</div>
+                <div class="prompt" id="prompt04"><i>-</i>账户名与密码不匹配，请重新输入</div>
+            </div>
+           <div style="text-align: center;color: red;" ng-repeat="re in regText.regList|filter:regText.regVal">{{re.tips}}</div>
+           <form novalidate name="nForm">
+                <ul>
+                    <li>
+                        <div class="fl"><img src="images/login02.png"></div>
+                        <div class="fr">
+                            <input name="nText" ng-model="name" id="name" type="text" value="" placeholder="用户名" required ng-pattern="/^[a-z]+$/">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fl"><img src="images/login03.png"></div>
+                        <div class="fr">
+                            <input name="nPwd" ng-model="pwd" id="pwd" type="password" value="" placeholder="密码" required>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <button id="btn" ng-click="regText.fn(nForm.nText.$error,nForm.nPwd.$error)">登录</button>
+       </div>
+   </div>
+

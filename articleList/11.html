@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="webApp" ng-controller="ctrl">
+    {{text}}
+</body>
+</html>
+<script src="src/frame/angular.js"></script>
+<script>
+    //供应商对初始化服务进行配置
+    var m = angular.module("webApp",[]);
+    m.config()
+    m.controller('ctrl',["$scope",'$interpolate',function($scope,$interpolate){
+        $scope.text=10
+    }])
+
+</script>

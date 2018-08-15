@@ -1,0 +1,63 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="row">
+            <h3 class="col-md-11 col-sm-11 col-xs-9 margin-right-15 ">Article列表</h3>
+            <button class="col-md-1 col-sm-1 col-xs-3  btn btn-success">+新增</button>
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table text-center">
+            <thead>
+                <tr class="table-header">
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>发布时间</th>
+                    <th>修改时间</th>
+                    <th>发布者</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="a in userData">
+                    <td>{{a.id}}</td>
+                    <td>{{a.title}}</td>
+                    <td>{{a.type}}</td>
+                    <td>
+                        {{a.createAt | date: "yyyy-MM-dd"}} {{a.createAt | date: "HH:mm:ss"}}
+                    </td>
+                    <td>
+                        {{a.createAt | date: "yyyy-MM-dd"}} {{a.createAt | date: "HH:mm:ss"}}
+                    </td>
+                    <td>{{a.author}}</td>
+                    <td>{{a.status}}</td>
+                    <td>
+                        <button class="btn btn-warning">{{a.status}}</button>
+                        <button class="btn btn-success">编辑</button>
+                        <button class="btn btn-danger">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <ul class="pagination">
+                <li>
+                  <a ng-click="first()">首页</a>
+                </li>
+                <li>
+                  <a ng-click="previous()">上一页</a>
+                </li>
+                <li ng-repeat="page in pageList">
+                  <a ng-click="selectpage(page)">{{page}}</a>
+                </li>
+                <li>
+                  <a ng-click="next()">下一页</a>
+                </li>
+                <li>
+                  <a ng-click="last()">末页</a>
+                </li>
+              </ul>
+        </ul>
+    </div>
+</div>

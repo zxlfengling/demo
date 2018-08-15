@@ -1,0 +1,115 @@
+<form class="form-group" >
+    <div class="col-md-8 col-md-offset-2">
+    <input  id="uploadImg" style="display: none;" 
+            type="file" nv-file-select 
+            uploader="uploader" accept=".jap,.png,.bmp,.jpeg,.gif"
+            multiple="" required ng-click="clearItem()"
+            onchange="angular.element(this).scope().getUrl(this.files)"            
+            >
+    </br>
+    <div> <img  id="img" ng-src="{{imgUrl}}" alt="预览图片" style="max-height: 300px;max-width: 100%;"></div>
+    <label for="uploadImg" class="btn btn-info btn-xs" ng-click="fileclick()">上传图片</label>
+ 
+    <!-- <div id="myimg"></div> -->
+    <div>{{imgUrl}}</div>
+    
+    <table class="table table-bordered text-center ">
+        <thead>
+            <tr >
+                <th class="text-center">图片名</th>
+                <th class="text-center">文件大小</th>
+                <th class="text-center">进度</th>
+                <th class="text-center">操作</th>
+                <th class="text-center">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr ng-repeat="item in uploader.queue" ng-if="now">
+                <td>{{item.file.name}}</td>
+                <td>{{item.file.size}}</td>
+                <td>
+                    <div class="progress rest-mr">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{item.progress + '%'}}" aria-valuemin="0"
+                            aria-valuemax="100" ng-style="{ 'width': item.progress + '%' }">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <span class="glyphicon" ng-class="{'glyphicon-ok':item.isSuccess,'glyphicon-remove':item.isError}"></span>
+                </td>
+                <td class="btn-group-xs" ng-if="item">
+                    <button class="btn btn-success" ng-click="item.upload();click($index)" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                        <span class="glyphicon glyphicon-upload"></span>Upload
+                    </button>
+                    <button class="btn btn-danger" ng-click="item.remove();removeImg($index)">
+                        <span class="glyphicon glyphicon-trash"></span>Delete
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isSuccess">
+                        <span class="glyphicon glyphicon-ban-circle"></span>Cancle
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</form>
+
+<!-- <form class="form-group">
+    <label class="col-md-1  col-md-offset-1 ">配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图
+        <span class="text-danger">*</span>
+    </label>
+    <input  id="upload" style="display: none;" 
+            type="file"  
+            value=""
+            accept=".jap,.png,.bmp,.jpeg,.gif"
+            multiple="" required 
+            onchange="angular.element('#upload').scope().getImg(this.files)"
+            >
+    </br>
+    <label for="upload" class="btn btn-info btn-xs">上传图片</label>
+    <div id="preview">       
+        <img  id="img" ng-src="{{imgSrc}}" alt="预览图片" style="max-height: 300px;max-width: 100%;">        
+    </div>
+
+    <table class="table table-bordered text-center ">
+        <thead>
+            <tr >
+                <th class="text-center">图片名</th>
+                <th class="text-center">文件大小</th>
+                <th class="text-center">进度</th>
+                <th class="text-center">操作</th>
+                <th class="text-center">操作</th>
+            </tr>
+        </thead>
+        <tbody ng-if="show_steps">
+            <tr>
+                <td>{{file.name}}</td>
+                <td>{{(file.size)/1024/1024 |number:2 }}M</td>
+                <td>
+                    <div class="progress rest-mr">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{progress + '%'}}" aria-valuemin="0"
+                            aria-valuemax="100" ng-style="{ 'width': progress + '%' }">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <span class="glyphicon" ng-class="{'glyphicon-ok':success,'glyphicon-remove':faild}"></span>
+                </td>
+                <td class="btn-group-xs" >
+                    <button class="btn btn-success" ng-click="upload()" ng-disabled="success">
+                        <span class="glyphicon glyphicon-upload"></span>Upload
+                    </button>
+                    <button class="btn btn-danger" ng-click="delete()">
+                        <span class="glyphicon glyphicon-trash"></span>Delete
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" ng-click="cancle()">
+                        <span class="glyphicon glyphicon-ban-circle"></span>Cancle
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form> -->

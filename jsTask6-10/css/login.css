@@ -1,0 +1,84 @@
+html {
+    font-size: 100px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+}
+
+.login-bg {
+    padding-top: 2rem;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/Backgroundpicture.png) no-repeat center;
+    background-size: cover;
+}
+
+.login-main {
+    margin: 0 auto;
+    padding: .2rem;
+    max-width: 5rem;
+    width: 80%;
+    background-color: #d0d2d8;
+}
+
+.login-main p {
+    color: #a01;
+}
+
+.login-main i {
+    color: #a01;
+}
+
+.login-main .success {
+    color: rgb(3, 160, 37);
+}
+
+.login-main h3 {
+    margin: 0 0 .2rem;
+    text-align: center;
+    color: rgb(3, 188, 244);
+}
+
+.user,
+.pwd {
+    margin-bottom: .05rem;
+    padding: .1rem;
+    background: #fff;
+}
+
+.user img {
+    padding: 0 .05rem;
+}
+
+.pwd img {
+    padding: 0 .06rem;
+}
+
+.u-input,
+.p-input {
+    padding-left: .1rem;
+    border: none;
+    width: 75%;
+}
+
+.tips {
+    color: red;
+    height: .16rem;
+}
+
+.btn-login {
+    margin-top: .5rem;
+    padding: .1rem;
+    width: 100%;
+    font-size: .16rem;
+}
+.margin-right-15{
+    margin-right:-15px;
+}
+.mgn-b-0 {
+    margin-bottom: 0;
+}

@@ -1,0 +1,64 @@
+<aside class="backstage_fr backstage_frbg" ng-controller="articleAdd">
+    <header></header>
+    <section>
+        <div class="md_bd">
+            <div class="hd">
+                新增Article
+            </div>
+            <ul>
+                <li>
+                    <i>标题名称</i>
+                    <em class="text-danger" ng-show="article.title==''||article.title==undefined">*</em>
+                    <input type="text" ng-model="article.title">
+                </li>
+                <li>
+                    <i>类型</i>
+                    <em class="text-danger" ng-show="params.type==''||params.type==undefined">*</em>
+                    <select ng-model="params.type">
+                        <option value="">请选择</option>
+                        <option value="{{x}}" ng-repeat="(x,y) in typeName">{{y}}</option>
+                    </select>
+                    <select ng-model="params.industry" ng-show="params.type==3" style="margin-left: 15px;">
+                        <option value="">请选择</option>
+                        <option value="{{x}}" ng-repeat="(x,y) in typeIndustry">{{y}}</option>
+                    </select>
+                </li>
+                <li>
+                    <i>说明</i><input type="text">
+                </li>
+                <li>
+                    <i>跳转链接</i>
+                    <em class="text-danger" ng-show="article.url==''||article.url==undefined">*</em>
+                    <input type="text" ng-model="article.url">
+                </li>
+                <li>
+                    <div ng-click="fileContent()" class="fileImage" id="fileImage"><img src="{{urlImg}}"></div>
+                    <input onchange="angular.element(this).scope().changeImg()" id="fileId" type="file" multiple="multiple" accept="image/png, image/jpeg, image/gif, image/jpg" name="file" />
+                    <P>{{url}}</P>
+                    <table class="tab" width="100%" cellpadding="0" cellspacing="0">
+                        <tr><th>图片名</th><th>文件大小</th><th>进度</th><th>操作</th><th>操作</th></tr>
+                        <tr>
+                            <td class="imgName"></td>
+                            <td class="imgSize"></td>
+                            <td>
+                                <div id="bar" class="imgshow">
+                                    <div id="progress" class="imgshow"></div>
+                                </div>
+                            </td>
+                            <td>{{imgTxt}}</td>
+                            <td>
+                                <button class="red" ng-click="deleteUpload()">删除</button>
+                                <button class="green" ng-click="upload()" ng-disabled="expression">上传</button>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <div class="btn">
+                <button>取消</button>
+                <span ng-click="online(article.title,params.type,2,article.url,fd,params.industry)">立即上线</span>
+                <span>存为草稿</span>
+            </div>
+        </div>
+    </section>
+</aside>

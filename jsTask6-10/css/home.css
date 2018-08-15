@@ -1,0 +1,102 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navbar-right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-right {
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.navbar-right li {
+    width: 100%;
+}
+
+.navbar-right li a {
+    display: inline-block;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background: rgb(243, 243, 243);
+}
+
+.sidebar {
+    text-align: center;
+    background-color: #222a39;
+}
+
+.dsb {
+    display: block;
+}
+
+.padd-v {
+    padding: 10px 0;
+}
+
+@media screen and (min-width:768px) {
+    .sidebar {
+        width: 250px;
+        
+        /* background-color: #222a39; */
+        float: left;
+        margin-bottom: -3000px;
+        padding-bottom: 3000px;
+        overflow: hidden;
+    }
+    .ui-container {
+        float: left;
+        padding: 15px;
+        width: calc(100% - 250px);
+        
+    }
+    .ui-container2{
+        margin-left: 250px;
+    }
+   
+}
+.btn.float-right {
+    float: right;
+}
+.sidebar div {
+    background-color: #222a39;
+}
+
+.sidebar a {
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.panel-group .panel {
+    padding: 10px 0;
+    margin-top: 0;
+    border-top: 1px solid #fff;
+}
+
+.click-color {
+    background-color: rgb(231, 227, 227);
+}
+
+.unclick-color {
+    background-color: #222a39;
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+
+}

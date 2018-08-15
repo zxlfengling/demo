@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .page-list .pagination {float:left;}
+        .page-list .pagination span {cursor: pointer;}
+        .page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
+        .page-list .pagination .separate span:hover {background: none;}
+        .page-list .page-total {float:left; margin: 25px 20px;}
+        .page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
+        .page-list .page-total input {width: 40px; padding-left:3px;}
+        .page-list .page-total select {width: 50px;}
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="testController">
+<tm-pagination conf="paginationConf"></tm-pagination>
+
+<script src="src/frame/angular.js"></script>
+<script src="src/pagination.js"></script>
+<script>
+    angular.module('myApp', []).controller('testController',function($scope){
+        $scope.paginationConf = {
+            currentPage: 1,
+            totalItems: 8000,
+            itemsPerPage: 15,
+            pagesLength: 15,
+            perPageOptions: [10, 20, 30, 40, 50],
+            onChange: function(){
+            }
+        };
+    })
+</script>
+</body>
+</html>

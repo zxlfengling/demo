@@ -1,0 +1,79 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,legend,button,form,fieldset,input,textarea,p,blockquote,th,td,strong,span,a {padding:0; margin:0;}
+*{font-family:"微软雅黑",Arial, Helvetica, sans-serif;}
+body{-webkit-tap-highlight-color:transparent;}
+ul,li{ list-style-type:none;}
+img{ border:none;}
+a{color: #fff; text-decoration:none; cursor:pointer; outline:none;}
+a:focus{outline:none;}
+s{ text-decoration: none; }
+strong,h1, h2, h3, h4, h5, h6{ font-weight:normal;}
+i,em,strong{ font-style:normal;}
+input{ cursor:pointer;outline: none;}
+table{ border-collapse: collapse; }
+u{ text-decoration: none;}
+
+/*登录页*/
+.login_bg{height: 100vh; background: url("../images/login01.jpg") no-repeat center; background-size:cover; overflow: hidden;}
+.login_box{margin: 100px auto 0;width: 536px;height: 392px;background:#d3d8e0;}
+.login_box h1{padding: 30px 0 25px 0; font-size: 30px;color: #03a9f4;text-align: center;}
+.login_box ul{ margin: 0 50px;}
+.login_box ul li{margin-bottom: 20px; height: 60px;background: #fff;overflow: hidden;}
+.login_box ul li .fl{float: left;margin-top: 20px; width: 50px;height: 19px;border-right: 1px solid #e8e8e8;text-align: center;}
+.login_box ul li .fr input{margin: 20px 0 0 20px;height: 19px; border: none; font-size: 14px;}
+.login_box button{width: 438px;margin: 30px 0 0 58px;border: none;cursor: pointer; border-radius: 6px; height: 64px;background: #03a9f4;color: #fff;font-size: 18px;}
+.login_bg .prompt{margin: 0 50px; height: 21px;background: #ffebeb;border: 1px solid #faccc6;}
+.login_bg .prompt{ font-size: 12px;color: #e4393c;display: none;}
+.login_bg .prompt i{display: inline-block;margin: 3px 13px 3px 10px; width: 16px;height: 16px;line-height: 12px; background: #e4393c; border-radius: 50%;color: #fff;text-align: center;font-size: 20px;}
+
+/*后台页*/
+.backstage_fl{float: left; width: 235px;height: 900px; background: #232a3a;color: #fff;}
+.backstage_fl .md_hd{padding-left: 23px; height: 49px;line-height: 50px;border-bottom: 1px solid #4b5d6a;}
+.backstage_fl ul{margin-top: 27px;}
+.backstage_fl ul li{padding-left: 38px;width: 140px;line-height: 40px;cursor: pointer;}
+.backstage_fl ul li img{float: right;padding-top: 14px;}
+.backstage_fl ul li .list{display: inline-block; margin-left: -38px; padding-left: 60px; width: 175px; height: 40px;background: #7b7f89;}
+.backstage_fr{margin-left: 235px;background: #f5f5f5;}
+.backstage_fl ul li .list a{color: #fff;}
+/*列表页*/
+.backstage_frbg{background: #fff;}
+.backstage_fr header{margin-bottom: 20px; height: 49px;border: 1px solid #ededed;}
+.backstage_fr section{margin: 30px 30px 0 30px;}
+.backstage_fr .md_hd{margin: 0 30px 20px 30px; padding: 15px 30px 0 30px; height: 143px;border: 1px solid #dcdcdc;border-radius: 4px;}
+.backstage_fr .md_hd input{padding-left: 10px; width: 167px; height: 32px; border: none; border: 1px solid #dcdcdc;border-radius: 4px;}
+.backstage_fr .md_hd span{display: inline-block;margin: 0 5px; width: 177px; height: 32px;cursor: pointer; border: 1px solid #dcdcdc;border-radius: 4px; vertical-align: middle;}
+.backstage_fr .md_hd select{width: 179px;height: 32px;}
+.backstage_fr .md_hd .search{float: right; margin-top: 50px;}
+.backstage_fr .md_hd .search s{display: inline-block;cursor: pointer; width: 54px;height: 34px;color: #fff; line-height: 34px; text-align: center;border-radius: 4px;}
+.backstage_fr .md_hd .search s.red{ margin-right: 5px; background: #d8524e;}
+.backstage_fr .md_hd .search s.green{background: #5ab65a;}
+.backstage_fr .md_bd{margin: 30px 30px 20px 30px; padding-bottom: 30px; border: 1px solid #dcdcdc;border-radius: 4px;}
+.backstage_fr .md_bd .hd{padding-left: 30px; height: 40px;line-height: 40px;border-bottom: 1px solid #dcdcdc;}
+.backstage_fr .md_bd .hd a{float: right;margin: 4px 10px 0 0; width: 50px;height: 30px;cursor: pointer; line-height: 30px;text-align: center;  background: #94d094;  border-radius: 4px;  color: #fff;}
+.backstage_fr .md_bd .bd{ margin: 15px;border: 1px solid #dcdcdc;}
+.backstage_fr .md_bd .bd th{height: 37px;border-bottom: 3px solid #dcdcdc;}
+.backstage_fr .md_bd .bd td{line-height: 56px;text-align: center;border-bottom: 1px solid #dcdcdc;}
+.backstage_fr .md_bd .bd td span{display:block;line-height: 28px;}
+.backstage_fr .md_bd .bd td:last-child{color: #5585b9;}
+.backstage_fr .md_bd .bd em{cursor: pointer;}
+.backstage_fr .md_bd ul{ margin: 15px 0 0 88px;}
+.backstage_fr .md_bd ul li{ margin-bottom: 14px;}
+.backstage_fr .md_bd ul li input{ width: 596px; height: 30px;}
+.backstage_fr .md_bd ul li #fileId1{width: 60px;height: 30px;}
+.backstage_fr .md_bd ul li table th,.backstage_fr .md_bd ul li table td{border: 1px solid #ccc;text-align: center;height: 30px;font-size: 14px;}
+.backstage_fr .md_bd select{margin-left: -4px; width: 130px; height: 32px; border-radius: 4px;outline: none;}
+.backstage_fr .md_bd li span{display: inline-block;cursor: pointer; width: 84px;height: 35px; line-height: 35px;text-align: center;background: #3278b5;border-radius: 4px;color: #fff;}
+.backstage_fr .md_bd .btn{ margin: 0 172px;}
+.backstage_fr .md_bd button{float: right;width: 50px;height: 33px; background: none; border: none;border: 1px solid #dcdcdc;}
+.backstage_fr .md_bd .btn span{display: inline-block; width: 84px;height: 35px;cursor: pointer; line-height: 35px;text-align: center;background: #94d094;border-radius: 4px;color: #fff;}
+.backstage_fr .foot{float: right;}
+.pagination li{ list-style: none; float: left;}
+.pagination li a{display: inline-block;margin: 0 3px;padding: 3px 15px;text-align: center;line-height: 32px;font-size: 12px;color: #3379b7;  border: 1px solid #dcdcdc;  cursor: pointer; }
+.pagination li.active a{background:#3379b7;color: #fff; }
+.text-danger{ color: red;}
+.backstage_fr .fileImage img{margin: 0 auto; width: 100px;height: 100px;}
+.backstage_fr .tab{ display: none;}
+.backstage_fr #bar{margin: 5px auto 0; width: 60px;height: 16px;border-radius: 8px;border: 1px solid green;}
+.backstage_fr #progress{width: 0;height: 16px; background: green;border-radius: 8px;}
+.backstage_fr .md_bd table button{position: relative;right: 30%; width: 60px;height: 20px;color: #fff; outline: none;cursor: pointer;}
+.backstage_fr .md_bd table button.green{ background: green;}
+.backstage_fr .md_bd table button.red{background: red;}
