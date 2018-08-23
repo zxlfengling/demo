@@ -8,7 +8,7 @@ angular.module("myApp")
     $scope.types = types;   
     $scope.industries = industries;
     // console.log($scope.industries);
-    //console.log($state.params.id)
+    console.log($state.params.id)
     //console.log($scope)
     if($state.params.id) {
         $scope.title = "编辑Article"
@@ -109,8 +109,5 @@ $scope.cancle = function() {
     } else {
         console.log("我受到了惊吓");
     }
-
-    
-    
 } 
 });

@@ -1,7 +1,7 @@
 /**
  * Created by zxl on 2018/8/9.
  */
-
+//指令就是为扩展html功能，减少DOM操作，实现数据绑定业务逻辑进行交互
 app.directive('myPagination', function () {
     return {
         restrict: 'EA',

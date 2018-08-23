@@ -57,6 +57,7 @@ u{ text-decoration: none;}
 .backstage_fr .md_bd .bd em{cursor: pointer;}
 .backstage_fr .md_bd ul{ margin: 15px 0 0 88px;}
 .backstage_fr .md_bd ul li{ margin-bottom: 14px;}
+.backstage_fr .md_bd ul li i{display: inline-block;width: 100px;}
 .backstage_fr .md_bd ul li input{ width: 596px; height: 30px;}
 .backstage_fr .md_bd ul li #fileId1{width: 60px;height: 30px;}
 .backstage_fr .md_bd ul li table th,.backstage_fr .md_bd ul li table td{border: 1px solid #ccc;text-align: center;height: 30px;font-size: 14px;}

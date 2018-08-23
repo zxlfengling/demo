@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr=new Array()//我们把系统自带的对象叫做系统对象
+    var tab=new Tab()//我们可以做选项卡的对象
+    tab.over()
+
+    对象的组成，
+    方法，属性组成
+
+    创建对象为对象添加属性和方法
+    var obj=new Object();
+    obj.name='小名'
+    obj.showName=function(){
+        alert(this.name)
+    }
+    obj.showName()
+
+
+    var obj=new Object();
+    obj.name='小强'
+    obj.showName=function(){
+        alert(obj.name)
+    }
+    obj.showName()
+
+    工厂方式(封装函数)
+    function CreatePerson(name){
+//       var obj=new Object();材料
+//        this
+        this.name=name;
+        this.showName=function(){
+            alert(this.name)加工
+        }
+//        return obj  成品
+    }
+    CreatePerson.prototype.showName=function(){
+
+    }
+  var p1= new  CreatePerson("xiaomiao");
+    p1.__proto__
+   var p2=new CreatePerson("xiaoqiang");
+
+
+    p1.name;
+    p1.showName()
+    CreatePerson("xiaomiao")
+
+    var arr=new Array();
+
+    CreatePerson.prototype.showName=function(){
+        alert(1)
+    }
+    p1.__proto__==CreatePerson.prototype.__proto__==Object.prototype
+  var p1=new CreatePerson();
+   /
+    var p2=new CreatePerson('hhja');
+    CreatePerson.prototype.showName=function(){
+        alert(this.name)
+    }
+    <!--var p2=new CreatePerson('小名');-->
+    <!--p1.showName();-->
+
+   var arr=new Array();
+    Array.prototype.push=function(){
+
+            }
+<!--</script>-->

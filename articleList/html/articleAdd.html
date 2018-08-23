@@ -3,36 +3,38 @@
     <section>
         <div class="md_bd">
             <div class="hd">
-                新增Article
+                {{title}}
             </div>
             <ul>
                 <li>
                     <i>标题名称</i>
-                    <em class="text-danger" ng-show="article.title==''||article.title==undefined">*</em>
-                    <input type="text" ng-model="article.title">
+                    <em class="text-danger" ng-show="article.author===''||article.author===undefined">*</em>
+                    <input type="text" ng-model="article.author">
                 </li>
                 <li>
                     <i>类型</i>
-                    <em class="text-danger" ng-show="params.type==''||params.type==undefined">*</em>
-                    <select ng-model="params.type">
+                    <em class="text-danger" ng-show="selectedType===null||selectedType===undefined">*</em>
+                    <select ng-options="c.id as c.type for c in typeName" ng-model="selectedType" name="type">
                         <option value="">请选择</option>
-                        <option value="{{x}}" ng-repeat="(x,y) in typeName">{{y}}</option>
                     </select>
-                    <select ng-model="params.industry" ng-show="params.type==3" style="margin-left: 15px;">
+                    <select ng-options="c.id as c.type for c in typeIndustry" ng-model="article.industry" ng-show="selectedType===3" style="margin-left: 15px;">
                         <option value="">请选择</option>
-                        <option value="{{x}}" ng-repeat="(x,y) in typeIndustry">{{y}}</option>
+                        <!--<option value="{{x}}" ng-repeat="(x,y) in typeIndustry">{{y}}</option>-->
                     </select>
                 </li>
                 <li>
                     <i>说明</i><input type="text">
                 </li>
                 <li>
-                    <i>跳转链接</i>
+                    <i ng-click="fn(selectedType)">跳转链接</i>
                     <em class="text-danger" ng-show="article.url==''||article.url==undefined">*</em>
                     <input type="text" ng-model="article.url">
                 </li>
                 <li>
-                    <div ng-click="fileContent()" class="fileImage" id="fileImage"><img src="{{urlImg}}"></div>
+                    <div ng-click="fileContent()" class="fileImage" id="fileImage">
+                        <img ng-if="show" src={{article.img}}>
+                        <img ng-if="!show" src={{urlImg}}>
+                    </div>
                     <input onchange="angular.element(this).scope().changeImg()" id="fileId" type="file" multiple="multiple" accept="image/png, image/jpeg, image/gif, image/jpg" name="file" />
                     <P>{{url}}</P>
                     <table class="tab" width="100%" cellpadding="0" cellspacing="0">
@@ -56,7 +58,7 @@
             </ul>
             <div class="btn">
                 <button>取消</button>
-                <span ng-click="online(article.title,params.type,2,article.url,fd,params.industry)">立即上线</span>
+                <span ng-click="online(article.author,selectedType,2,article.img,article.url,article.industry)">立即上线</span>
                 <span>存为草稿</span>
             </div>
         </div>
