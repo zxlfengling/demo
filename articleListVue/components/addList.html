@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation-datepicker.css">
+    <title></title>
+</head>
+<body>
+<aside class="backstage_fr backstage_frbg" id="webApp">
+    <header></header>
+    <section>
+        <div class="md_bd">
+            <div class="hd">
+
+            </div>
+            <ol>
+                <li>
+                    <i>标题名称{{a}}</i>
+                    <em class="text-danger">*</em>
+                    <input type="text">
+                </li>
+                <li>
+                    <i>类型</i>
+                    <em class="text-danger">*</em>
+                    <select name="type">
+                        <option value="">请选择</option>
+                    </select>
+                    <select style="margin-left: 15px;">
+                        <option value="">请选择</option>
+                    </select>
+                </li>
+                <li><i>说明</i></li>
+                <li>
+                    <i>跳转链接</i>
+                    <em class="text-danger">*</em>
+                    <input type="text">
+                </li>
+                <li>
+                    <div class="fileImage" id="fil eImage">
+                        <img src="">
+                    </div>
+                    <input id="fileId" type="file" name="file" />
+                    <P></P>
+                    <table class="tab" width="100%" cellpadding="0" cellspacing="0">
+                        <tr><th>图片名</th><th>文件大小</th><th>进度</th><th>操作</th><th>操作</th></tr>
+                        <tr>
+                            <td class="imgName"></td>
+                            <td class="imgSize"></td>
+                            <td>
+                                <div id="bar" class="imgshow">
+                                    <div id="progress" class="imgshow"></div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <button class="green">上传</button>
+                                <button class="red">删除</button>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ol>
+            <div class="btn">
+                <button>立即上线</button>
+                <span>存为草稿</span>
+            </div>
+        </div>
+    </section>
+</aside>
+</body>
+</html>
+<script src="src/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="src/addList.js"></script>

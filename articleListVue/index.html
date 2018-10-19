@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="webApp">
+    <router-link to="/s">你好</router-link>
+    <router-view></router-view>
+</div>
+
+</body>
+</html>
+<script src="src/vue.js"></script>
+<script src="src/vue-router.js"></script>
+
+<script>
+    const Foo = { template: '<div>User</div>' }
+
+    const router=new VueRouter({
+        routes:[
+            {
+                path:'/s',
+                component:Foo
+            }
+        ]
+    })
+    new Vue({
+        el:"#webApp",
+        router:router
+    })
+</script>
+

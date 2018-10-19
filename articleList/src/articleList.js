@@ -24,8 +24,14 @@ app.controller('articleList',function($http,$scope,$state,$stateParams,typeName,
     //factory工厂模式都是接收两个参数，一个是服务的名字，一个是服务的返回值
     //service与工厂模式差不多，只不过，service可以提供构造函数
     //provider这个方法可以做供应商config配置
-    console.log($stateParams.page)
+    //alert($stateParams.page)
+    //自定义服务是数据的共享与传递 ，不同的控制器之间的共享与传递
 
+    //$state是一个对象（为路由服务的对象），提供了方法和属性，其中有$state.go('')提供三个参数
+    //第一个参数是跳转的页面，传递的参数，实现重载页面（重新加载当前需要的所有的内容，就是重新从后台获取数据，后台和前台都会重新操作）
+    //保留之前的缓存内容，重新加载页面，之前存在的东西不会动，没加载上来的东西继续加载，也会去加载后台代码内容的。
+    //$state提供一个属性$state.params是属性，是目标页接收路由传递的参数，
+    //$stateParam获取目标页传递的参数
     if($state.params.type==undefined){//对接受的参数进行判断，如果是undefined,我就赋值undefiend
         $state.params.type=undefined;
     }else{
@@ -39,35 +45,45 @@ app.controller('articleList',function($http,$scope,$state,$stateParams,typeName,
     }
     $('#dateStart').fdatepicker({format: 'yyyy-mm-dd',});//日历插件
     $('#dateEnd').fdatepicker({format: 'yyyy-mm-dd',});
+        console.log($scope.params)
     $scope.typeName = typeName;//类型
+    //console.log(typeName)
     $scope.typeStates=typeStates//状态
 
     $scope.params=$state.params;//$state.params表示接收路由的传过来的参数
-    console.log($state.params)
+    //console.log($state.params)
 
-     $scope.startAt=$state.params.startAt;//$stateParams接收url的参数
+     $scope.startAt=$state.paramsstartAt;//$stateParams接收url的参数
     //console.log($scope.startAt)
      $scope.endAt=$state.params.endAt;
-    //
+
     $state.params.startAt =($scope.startAt)? (Date.parse($scope.startAt) + (0 * 60 * 60 * 1000)):"";
     $state.params.endAt = ($scope.endAt)? ( Date.parse($scope.endAt) + ( 24 * 60 * 60 * 1000)):"";
 
+    //属性指令用于改变元素的外观和行为,元素指令用与扩展标签，为标签封装特定的功能
     //获取数据
         $http(//用于读取远程的数据
             {
                 method:'GET',//请求的方式
                 url:'/carrots-admin-ajax/a/article/search',//请求的地址
                 params:$scope.params,
+                // params:{
+                //     type:2
+                // }
             }).then(function successCallback(data){
-                //console.log(data)//请求成功后返回的数据
+                console.log(data)//请求成功后返回的数据
                 //console.log(Math.ceil(data.data.data.total/10))
-                //$scope.total=Math.ceil(data.data.data.total/10);
                 $scope.list=data.data.data.articleList;
-                console.log()
+                $state.total=data.data.data.total;
+                sessionStorage.setItem('total', $state.total);
+                //$scope.total=data.data.data.total
+                //console.log($scope.list)
             }, function errorCallback(data) {
                 // 请求失败执行代码
             }
         )
+
+    //alert($state.params.total)
     //上线、下线更新一条数据
     $scope.fn=function(id,status){
         if(status==1){
@@ -114,7 +130,8 @@ app.controller('articleList',function($http,$scope,$state,$stateParams,typeName,
     }
 
     $scope.search = function(start,end,types,states,page) {
-        console.log(page)
+        //console.log(page)
+        //window.location.reload()
         $state.go(//$state是跟路由搭配使用的一个方法，$state.go就是路由的跳转，也就是路由从一种状态到另外
             //的一种状态，提供三个参数，第一个参数数是你要跳转的状态，第二个是你要传递的参数，reload为true表示会重载
             //
@@ -124,24 +141,26 @@ app.controller('articleList',function($http,$scope,$state,$stateParams,typeName,
                 endAt:end,
                 type:types,
                 status:states,
-            },
-            { reload: true }//表示重新更新数据,重新从后台获取数据，重新载入我要查询那条数据
+            }
+            //{ reload: true }//表示重新更新数据,重新从后台获取数据，重新载入我要查询那条数据
         );
     };
 
+
     $scope.option = {
-        curr: 1,  //当前页数
-        all: 20,  //总页数
-        count: 9,  //最多显示的页数，默认为10
+        curr: $state.params.page,  //当前页数
+        all:Math.ceil(parseInt(sessionStorage.getItem('total'))),  //总页数
+        count: 5,  //最多显示的页数，默认为10
         //点击页数的回调函数，参数page为点击的页数
         click: function (page) {
-            $scope.page=page;
+            //location.reload()
             $state.go(
                 "home.articleList",
                 {
                     page:page,
                 }
             );
+            //location.reload();
             //console.log(page);
             //这里可以写跳转到某个页面等...
         }

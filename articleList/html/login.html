@@ -13,13 +13,13 @@
                     <li>
                         <div class="fl"><img src="images/login02.png"></div>
                         <div class="fr">
-                            <input name="nText" ng-model="name" id="name" type="text" value="" placeholder="用户名" required ng-pattern="/^[a-z]+$/">
+                            <input name="nText" ng-model="name" id="name" type="text" value="" placeholder="用户名" required>
                         </div>
                     </li>
                     <li>
                         <div class="fl"><img src="images/login03.png"></div>
                         <div class="fr">
-                            <input name="nPwd" ng-model="pwd" id="pwd" type="password" value="" placeholder="密码" required>
+                            <input name="nPwd" ng-model="pwd" id="pwd" type="password" value="" placeholder="密码" v-bind:style = {"disabled:false"}>
                         </div>
                     </li>
                 </ul>

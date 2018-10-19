@@ -16,6 +16,7 @@ app.controller('login',['$scope','$http','$state',function($scope,$http,$state){
                 {name:'minlength01',tips:'密码必须是6位以上'},
             ],
             fn:function(err,err1){
+                alert(err)
                 console.log(err)
                 console.log(err1)
                 for(var attr in err){

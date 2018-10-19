@@ -5,11 +5,12 @@
             <div class="hd">
                 {{title}}
             </div>
-            <ul>
+            <ol>
                 <li>
                     <i>标题名称</i>
                     <em class="text-danger" ng-show="article.author===''||article.author===undefined">*</em>
                     <input type="text" ng-model="article.author">
+                    <!--<button ng-disabled = 'article.author==undefined||selectedType==undefined' ng-click="fn()">好</button>-->
                 </li>
                 <li>
                     <i>类型</i>
@@ -22,18 +23,23 @@
                         <!--<option value="{{x}}" ng-repeat="(x,y) in typeIndustry">{{y}}</option>-->
                     </select>
                 </li>
-                <li>
-                    <i>说明</i><input type="text">
-                </li>
+                <i style="float: left;width: 100px;">说明</i>
+                <div id="editor" ng-model="sendPromt" style="position: relative; margin-left: 100px; width: 600px;">
+                    <!--<div ng-bind="10"></div>-->
+
+                </div>
                 <li>
                     <i ng-click="fn(selectedType)">跳转链接</i>
                     <em class="text-danger" ng-show="article.url==''||article.url==undefined">*</em>
                     <input type="text" ng-model="article.url">
                 </li>
                 <li>
-                    <div ng-click="fileContent()" class="fileImage" id="fileImage">
-                        <img ng-if="show" src={{article.img}}>
-                        <img ng-if="!show" src={{urlImg}}>
+                    <div class="fileImage" id="fil eImage">
+                        <!--<img ng-src={{article.img}}>-->
+                        <img src="{{imgs}}">
+                        <!--<img n g-src="{{article.img}}">-->
+
+                        <!--<input type="text" ng-model="article.img">-->
                     </div>
                     <input onchange="angular.element(this).scope().changeImg()" id="fileId" type="file" multiple="multiple" accept="image/png, image/jpeg, image/gif, image/jpg" name="file" />
                     <P>{{url}}</P>
@@ -49,18 +55,21 @@
                             </td>
                             <td>{{imgTxt}}</td>
                             <td>
-                                <button class="red" ng-click="deleteUpload()">删除</button>
                                 <button class="green" ng-click="upload()" ng-disabled="expression">上传</button>
+                                <button class="red" ng-click="deleteUpload()" ng-disabled="delete">删除</button>
                             </td>
                         </tr>
                     </table>
                 </li>
-            </ul>
+            </ol>
             <div class="btn">
-                <button>取消</button>
-                <span ng-click="online(article.author,selectedType,2,article.img,article.url,article.industry)">立即上线</span>
+                <!--<button ng-click="cancel()">取消</button>-->
+                <!--<span></span>-
+                <!--{{article.author}}-->
+                <button ng-click="online(article.author,selectedType,2,article.url,article.img,article.industry)">立即上线</button>
                 <span>存为草稿</span>
             </div>
         </div>
     </section>
+
 </aside>
